@@ -7,6 +7,7 @@
   <meta name="description" content="Discover 42+ high-utility, zero-server web tools and BYOK AI studios. All processing happens 100% locally in your browser memory — your files, API keys, and data never touch a remote server.">
   <meta name="keywords" content="client-side tools, private web tools, developer utilities, in-browser tools, zero telemetry, byok ai tools, media utilities, privacy tools, c2pa stripper, synthid remover">
   <link rel="canonical" href="https://greentools-dev.github.io/">
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
   <meta property="og:title" content="GreenTools.dev | 42+ Private In-Browser Utilities &amp; BYOK Studios">
   <meta property="og:description" content="42+ Zero-Server Utilities &amp; BYOK Web Studios. 100% Client-Side Processing. Zero Telemetry.">
   <meta property="og:type" content="website">
@@ -19,7 +20,7 @@
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <script>
     tailwind.config = {
@@ -27,17 +28,17 @@
         extend: {
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['"Fraunces"', 'Georgia', 'serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            brand: {
-              50: '#ecfdf5',
-              100: '#d1fae5',
-              500: '#10b981',
-              600: '#059669',
-              700: '#047857',
-              900: '#064e3b',
-            }
+            canvas: '#FBFBF9',
+            ink: '#111110',
+            forest: '#1A362B',
+            warmborder: '#EAE8E3',
+            sand: '#F4F3F0',
+            charcoal: '#37352F',
+            subtle: '#76746E',
           }
         }
       }
@@ -46,17 +47,20 @@
 
   <style>
     body {
-      background-color: #f8fafc;
-      background-image: 
-        radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
-      background-size: 24px 24px;
+      background-color: #FBFBF9;
+      color: #111110;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    h1, h2, h3, h4, .serif {
+      font-family: 'Fraunces', Georgia, serif;
     }
     .tool-card {
       transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .tool-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.08);
+      box-shadow: 0 10px 24px -10px rgba(17, 17, 16, 0.08);
+      border-color: #1A362B;
     }
   </style>
 
@@ -69,7 +73,7 @@
         "@type": "WebSite",
         "name": "GreenTools.dev",
         "url": "https://greentools-dev.github.io/",
-        "description": "Network of 40+ 100% client-side web tools and BYOK AI studios processing data entirely in browser memory."
+        "description": "Network of 42+ 100% client-side web tools and BYOK AI studios processing data entirely in browser memory."
       },
       {
         "@type": "CollectionPage",
@@ -127,101 +131,264 @@
   }
   </script>
 </head>
-<body class="min-h-screen flex flex-col font-sans text-slate-800 antialiased selection:bg-brand-100 selection:text-brand-900">
+<body class="min-h-screen flex flex-col antialiased selection:bg-[#EAE8E3] selection:text-[#111110]">
 
   <!-- Header -->
-  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur-md sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+  <header class="border-b border-[#EAE8E3] bg-[#FBFBF9]/95 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
       <div class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-sm shadow-emerald-500/20">
-          <i data-lucide="sparkles" class="w-5 h-5"></i>
-        </div>
-        <div>
-          <span class="font-extrabold text-slate-900 tracking-tight text-xl">GreenTools<span class="text-emerald-600">.dev</span></span>
-        </div>
+        <a href="/" class="flex items-center gap-2.5 group">
+          <span class="w-3.5 h-3.5 rounded-full bg-[#1A362B] group-hover:scale-110 transition-transform"></span>
+          <span class="serif font-bold text-xl tracking-tight text-[#111110]">GREENTOOLS<span class="text-[#1A362B]">.DEV</span></span>
+        </a>
       </div>
-      <div class="flex items-center gap-4">
-        <a href="https://greentools-dev.github.io/launchist-blog-fleet/" class="text-sm font-semibold text-[#1A362B] hover:text-black">Operating Guides (300)</a>
-        <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80">
-          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
-          100% In-Browser &bull; Zero Server Analytics
-        </span>
-        <a href="https://github.com/greentools-dev" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-900 transition-colors p-1.5" title="GitHub Organization">
-          <i data-lucide="github" class="w-5 h-5"></i>
+      <div class="flex items-center gap-6 text-xs font-semibold">
+        <a href="https://greentools-dev.github.io/launchist-blog-fleet/" class="text-[#76746E] hover:text-[#111110] transition-colors flex items-center gap-1.5">
+          <span>Operating Guides (300)</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+        </a>
+        <a href="https://launchist.store" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex text-[#76746E] hover:text-[#111110] transition-colors">
+          Launchist Store
+        </a>
+        <a href="/sitemap.xml" class="hidden md:inline-flex text-[#76746E] hover:text-[#111110] transition-colors">
+          Master Sitemap
+        </a>
+        <a href="https://github.com/greentools-dev" target="_blank" rel="noopener noreferrer" class="text-[#76746E] hover:text-[#111110] transition-colors" title="GitHub Organization">
+          <i data-lucide="github" class="w-4 h-4"></i>
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Hero & Trust Anchor -->
-  <section class="max-w-7xl w-full mx-auto px-4 pt-10 sm:pt-14 pb-8 flex flex-col items-center text-center">
-    
-    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200/70 mb-5 shadow-2xs">
-      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-      42 Free In-Browser Utilities &amp; BYOK Web Studios
+  <!-- Hero Section -->
+  <section class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#EAE8E3] bg-[#F4F3F0] text-[11px] font-bold text-[#1A362B] uppercase tracking-wider mb-6">
+      <span class="w-2 h-2 rounded-full bg-[#1A362B]"></span>
+      42 Client-Side Utilities &bull; Zero Server Analytics
     </div>
 
-    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-3xl leading-tight sm:leading-tight">
-      Private, Instant Web Tools with <span class="text-emerald-600">Zero Cloud Uploads</span>.
+    <h1 class="text-4xl sm:text-6xl font-bold tracking-tight text-[#111110] mb-6 leading-[1.12]">
+      Private In-Browser Utilities with <span class="italic font-normal text-[#1A362B]">Zero Cloud Telemetry</span>.
     </h1>
 
-    <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
-      High-utility calculators, media converters, schema architects, and BYOK AI studios that run entirely inside your browser memory. No logins, no subscriptions, zero tracking.
+    <p class="text-base sm:text-lg text-[#76746E] max-w-2xl mx-auto leading-relaxed mb-8">
+      Calculators, media purifiers, schema architects, and BYOK AI studios executing 100% locally in your browser memory. Your files, passwords, audio, and API keys never leave your device.
     </p>
 
-    <!-- Trust Anchor Banner -->
-    <div class="mt-6 w-full max-w-3xl p-4 rounded-2xl bg-white border border-emerald-200/90 shadow-sm flex items-center gap-3.5 text-left">
-      <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
-        <i data-lucide="lock" class="w-5 h-5"></i>
+    <!-- Trust Stats Matrix -->
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
+      <div class="p-3.5 rounded-xl border border-[#EAE8E3] bg-[#FFFFFF] text-left">
+        <p class="text-[10px] font-bold tracking-wider text-[#76746E] uppercase">Architecture</p>
+        <p class="serif text-lg font-bold text-[#111110] mt-0.5">100% Client RAM</p>
       </div>
-      <div>
-        <div class="text-xs sm:text-sm font-bold text-slate-900">
-          42 Zero-Server Utilities &amp; BYOK Studios. Processed 100% in your browser memory.
+      <div class="p-3.5 rounded-xl border border-[#EAE8E3] bg-[#FFFFFF] text-left">
+        <p class="text-[10px] font-bold tracking-wider text-[#76746E] uppercase">Data Telemetry</p>
+        <p class="serif text-lg font-bold text-[#111110] mt-0.5">Zero Remote Logs</p>
+      </div>
+      <div class="p-3.5 rounded-xl border border-[#EAE8E3] bg-[#FFFFFF] text-left">
+        <p class="text-[10px] font-bold tracking-wider text-[#76746E] uppercase">License &amp; Access</p>
+        <p class="serif text-lg font-bold text-[#111110] mt-0.5">MIT / Free Always</p>
+      </div>
+      <div class="p-3.5 rounded-xl border border-[#EAE8E3] bg-[#FFFFFF] text-left">
+        <p class="text-[10px] font-bold tracking-wider text-[#76746E] uppercase">Fleet Density</p>
+        <p class="serif text-lg font-bold text-[#111110] mt-0.5">42 Active Utilities</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Editor's System Spotlight: High-Converting Commercial Showcase -->
+  <section class="max-w-7xl mx-auto px-6 mb-16">
+    <div class="rounded-3xl border border-[#EAE8E3] bg-[#111110] text-[#FBFBF9] p-8 sm:p-12 shadow-md relative overflow-hidden">
+      <!-- Editorial Header -->
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-10 pb-8 border-b border-[#33312B]">
+        <div class="max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#1A362B] text-white text-[10px] font-bold tracking-widest uppercase mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-white"></span>
+            Editor's System Spotlight &bull; The Launchist Suite
+          </div>
+          <h2 class="serif text-3xl sm:text-4xl font-bold tracking-tight text-white mb-3">
+            Engineered Notion Workspaces for Intentional Operators
+          </h2>
+          <p class="text-sm sm:text-base text-[#BCBAAF] leading-relaxed">
+            Replace chaotic spreadsheets, fleeting notes, and subscription SaaS fatigue with permanent relational architectures. Designed by Neon Miller for non-linear operators, content creators, and scaling e-commerce businesses.
+          </p>
         </div>
-        <div class="text-xs text-slate-500 mt-0.5">
-          Your photos, passwords, CSVs, audio files, API keys, and prompts never touch an external server or telemetry pipeline.
+        <div class="flex items-center gap-4 shrink-0">
+          <a href="https://launchist.store" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-[#111110] text-xs font-bold hover:bg-[#F4F3F0] transition">
+            Explore All Systems <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 5 Core Workspaces Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
+        
+        <!-- Workspace 1: ADHD Life OS -->
+        <div class="p-5 rounded-2xl bg-[#1C1B18] border border-[#2B2925] flex flex-col justify-between hover:border-[#1A362B] transition group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#9D9B94]">Neurodivergent</span>
+              <span class="serif font-bold text-base text-white">$35</span>
+            </div>
+            <h3 class="serif text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">ADHD Life OS 2.0</h3>
+            <p class="text-xs text-[#9D9B94] leading-relaxed mb-4">
+              Energy-aware daily execution engine. Plan around dopamine, cognitive reserves, and momentum rather than rigid 8-hour clocks.
+            </p>
+            <div class="space-y-1.5 text-[11px] text-[#BCBAAF] mb-6">
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Dopamine stimulation tiers</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Cognitive balance sweeps</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> 5-second quick capture</div>
+            </div>
+          </div>
+          <a href="https://launchist.store/systems/adhd-life-os/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-lg bg-[#2B2925] text-white hover:bg-white hover:text-black transition text-center text-xs font-bold">
+            Get ADHD OS &rarr;
+          </a>
+        </div>
+
+        <!-- Workspace 2: Second Brain -->
+        <div class="p-5 rounded-2xl bg-[#1C1B18] border border-[#2B2925] flex flex-col justify-between hover:border-[#1A362B] transition group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#9D9B94]">Knowledge Architecture</span>
+              <span class="serif font-bold text-base text-white">$79</span>
+            </div>
+            <h3 class="serif text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Second Brain &amp; 2027 OS</h3>
+            <p class="text-xs text-[#9D9B94] leading-relaxed mb-4">
+              Unified relational database architecture connecting annual goals, 12-week sprints, and knowledge archives.
+            </p>
+            <div class="space-y-1.5 text-[11px] text-[#BCBAAF] mb-6">
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Unified PARA database</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> 12-week project sprints</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Notion Formulas 2.0 rollups</div>
+            </div>
+          </div>
+          <a href="https://launchist.store/systems/second-brain/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-lg bg-[#2B2925] text-white hover:bg-white hover:text-black transition text-center text-xs font-bold">
+            Get Second Brain &rarr;
+          </a>
+        </div>
+
+        <!-- Workspace 3: Creator OS -->
+        <div class="p-5 rounded-2xl bg-[#1C1B18] border border-[#2B2925] flex flex-col justify-between hover:border-[#1A362B] transition group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#9D9B94]">Media Pipelines</span>
+              <span class="serif font-bold text-base text-white">$69</span>
+            </div>
+            <h3 class="serif text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Monetized Creator OS</h3>
+            <p class="text-xs text-[#9D9B94] leading-relaxed mb-4">
+              Multi-platform scheduling, inbound sponsor CRM, script batching, and cash-in-hand accounting ledgers.
+            </p>
+            <div class="space-y-1.5 text-[11px] text-[#BCBAAF] mb-6">
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> 10x repurposing engine</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Deal stage cashbook</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Safe zone UI compliance</div>
+            </div>
+          </div>
+          <a href="https://launchist.store/systems/creator-os/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-lg bg-[#2B2925] text-white hover:bg-white hover:text-black transition text-center text-xs font-bold">
+            Get Creator OS &rarr;
+          </a>
+        </div>
+
+        <!-- Workspace 4: E-Commerce OS -->
+        <div class="p-5 rounded-2xl bg-[#1C1B18] border border-[#2B2925] flex flex-col justify-between hover:border-[#1A362B] transition group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#9D9B94]">DTC Logistics</span>
+              <span class="serif font-bold text-base text-white">$59</span>
+            </div>
+            <h3 class="serif text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">E-Commerce Shop OS</h3>
+            <p class="text-xs text-[#9D9B94] leading-relaxed mb-4">
+              Central operations desk unifying inventory reorder thresholds, supplier contracts, order logs, and COGS margins.
+            </p>
+            <div class="space-y-1.5 text-[11px] text-[#BCBAAF] mb-6">
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Dynamic safety reorders</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Blended contribution margin</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Reverse logistics recovery</div>
+            </div>
+          </div>
+          <a href="https://launchist.store/systems/ecommerce-os/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-lg bg-[#2B2925] text-white hover:bg-white hover:text-black transition text-center text-xs font-bold">
+            Get Ecom OS &rarr;
+          </a>
+        </div>
+
+        <!-- Workspace 5: Real Estate OS -->
+        <div class="p-5 rounded-2xl bg-[#1C1B18] border border-[#2B2925] flex flex-col justify-between hover:border-[#1A362B] transition group">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-[10px] font-bold uppercase tracking-wider text-[#9D9B94]">Transactions</span>
+              <span class="serif font-bold text-base text-white">$95</span>
+            </div>
+            <h3 class="serif text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Real Estate Agent OS</h3>
+            <p class="text-xs text-[#9D9B94] leading-relaxed mb-4">
+              Escrow milestone tracking, 48-hour inspection contingency alerts, client closing portal, and commission splits.
+            </p>
+            <div class="space-y-1.5 text-[11px] text-[#BCBAAF] mb-6">
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Contingency deadline alerts</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Brokerage net split auditor</div>
+              <div class="flex items-center gap-1.5"><i data-lucide="check" class="w-3.5 h-3.5 text-emerald-500"></i> Client closing portal</div>
+            </div>
+          </div>
+          <a href="https://launchist.store/systems/real-estate-os/" target="_blank" rel="noopener noreferrer" class="w-full py-2.5 rounded-lg bg-[#2B2925] text-white hover:bg-white hover:text-black transition text-center text-xs font-bold">
+            Get Agent OS &rarr;
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Commercial Footnote -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#9D9B94] pt-4 border-t border-[#2B2925]">
+        <div class="flex items-center gap-2">
+          <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+          <span>One-time payment &bull; Instant Notion duplicate &bull; Lifetime updates &amp; zero monthly software debt</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://greentools-dev.github.io/launchist-blog-fleet/" class="text-white hover:underline flex items-center gap-1 font-semibold">
+            Read the 300 System Architecture Guides <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+          </a>
         </div>
       </div>
     </div>
-
   </section>
 
-  <!-- Filter & Search Controls -->
-  <section class="max-w-7xl w-full mx-auto px-4 pb-6 sticky top-16 z-30 bg-white/80 backdrop-blur-md py-4 border-b border-slate-200/60">
+  <!-- High-Density Filter & Search Bar -->
+  <section class="max-w-7xl w-full mx-auto px-6 sticky top-16 z-30 bg-[#FBFBF9]/95 backdrop-blur-md py-4 border-b border-[#EAE8E3]">
     <div class="flex flex-col md:flex-row items-center justify-between gap-4">
       
-      <!-- Category Filter Pills -->
+      <!-- Minimalist Category Tags -->
       <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none" id="category-pills">
-        <button type="button" class="cat-pill active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white transition-all shadow-sm" data-category="all">
-          All Tools <span class="ml-1 opacity-75 font-mono text-[11px]" id="count-all">42</span>
+        <button type="button" class="cat-pill active px-3 py-1.5 rounded-lg text-[11px] font-bold bg-[#111110] text-[#FBFBF9] border border-[#111110] transition shadow-xs" data-category="all">
+          ALL <span class="ml-1 opacity-75 font-mono text-[10px]" id="count-all">42</span>
         </button>
-        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="byok">
-          AI Web Studios (BYOK) <span class="ml-1 text-purple-600 font-mono text-[11px] font-bold" id="count-byok">10</span>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="browser-only">
+          100% IN-BROWSER <span class="ml-1 font-mono text-[10px] text-[#1A362B] font-bold" id="count-browser">32</span>
         </button>
-        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="media">
-          Media &amp; Video <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-media">8</span>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="byok">
+          BYOK LOCAL <span class="ml-1 font-mono text-[10px] text-[#111110] font-bold" id="count-byok">10</span>
         </button>
-        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="data">
-          Data &amp; CSV <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-data">3</span>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="media">
+          MEDIA <span class="ml-1 font-mono text-[10px]" id="count-media">8</span>
         </button>
-        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="ai">
-          AI &amp; Prompts <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-ai">4</span>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="data">
+          DATA <span class="ml-1 font-mono text-[10px]" id="count-data">3</span>
         </button>
-        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="privacy">
-          Privacy &amp; Security <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-privacy">6</span>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="privacy">
+          PRIVACY <span class="ml-1 font-mono text-[10px]" id="count-privacy">6</span>
         </button>
-        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="utilities">
-          Daily Utilities <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-utilities">11</span>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="utilities">
+          UTILITIES <span class="ml-1 font-mono text-[10px]" id="count-utilities">11</span>
+        </button>
+        <button type="button" class="cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition" data-category="ai">
+          AI &amp; PROMPTS <span class="ml-1 font-mono text-[10px]" id="count-ai">4</span>
         </button>
       </div>
 
-      <!-- Real-Time Search Bar -->
+      <!-- Search Input -->
       <div class="relative w-full md:w-80">
-        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-          <i data-lucide="search" class="w-4 h-4"></i>
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-[#76746E]">
+          <i data-lucide="search" class="w-3.5 h-3.5"></i>
         </div>
-        <input type="text" id="search-input" placeholder="Search 42+ tools... (Press '/' to focus)" class="w-full pl-9 pr-10 py-2 rounded-xl text-xs font-medium border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-2xs transition-all placeholder:text-slate-400">
-        <button type="button" id="search-clear" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600">
+        <input type="text" id="search-input" placeholder="Search 42 utilities... (Press '/' to focus)" class="w-full pl-9 pr-10 py-1.5 rounded-lg text-xs font-medium border border-[#EAE8E3] bg-[#FFFFFF] focus:outline-none focus:border-[#111110] transition placeholder:text-[#76746E]">
+        <button type="button" id="search-clear" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-[#76746E] hover:text-[#111110]">
           <i data-lucide="x" class="w-3.5 h-3.5"></i>
         </button>
       </div>
@@ -230,73 +397,70 @@
   </section>
 
   <!-- Tools Directory Grid -->
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-8">
+  <main class="flex-1 max-w-7xl w-full mx-auto px-6 py-8">
     
     <!-- Active Tools Count -->
-    <div class="flex items-center justify-between mb-6 text-xs text-slate-500 font-medium">
-      <span>Showing <strong id="visible-count" class="text-slate-900 font-bold">40</strong> applications</span>
-      <span class="text-slate-400">Press Esc to reset search</span>
+    <div class="flex items-center justify-between mb-6 text-xs text-[#76746E] font-medium">
+      <span>Showing <strong id="visible-count" class="text-[#111110] font-bold">42</strong> applications</span>
+      <span class="text-[11px]">Press Esc to reset search</span>
     </div>
 
     <!-- Empty Search State -->
-    <div id="empty-search" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 shadow-sm p-8">
-      <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+    <div id="empty-search" class="hidden text-center py-16 bg-[#FFFFFF] rounded-2xl border border-[#EAE8E3] p-8">
+      <div class="w-12 h-12 rounded-xl bg-[#F4F3F0] text-[#76746E] flex items-center justify-center mx-auto mb-3">
         <i data-lucide="search-x" class="w-6 h-6"></i>
       </div>
-      <h3 class="text-base font-bold text-slate-900 mb-1">No matching tools found</h3>
-      <p class="text-xs text-slate-500 max-w-sm mx-auto mb-4">Try checking your spelling or selecting "All Tools" to view the full directory.</p>
-      <button type="button" id="btn-reset-filters" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors">
+      <h3 class="serif text-base font-bold text-[#111110] mb-1">No matching tools found</h3>
+      <p class="text-xs text-[#76746E] max-w-sm mx-auto mb-4">Try checking your spelling or selecting "ALL" to view the complete directory.</p>
+      <button type="button" id="btn-reset-filters" class="px-4 py-2 rounded-lg bg-[#111110] hover:bg-black text-[#FBFBF9] font-semibold text-xs transition">
         Reset Search &amp; Filters
       </button>
     </div>
 
     <!-- Cards Grid -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="tools-grid">
-      <!-- 40 Cards dynamically rendered via JavaScript -->
+      <!-- 42 Cards dynamically rendered via JavaScript -->
     </div>
-
-    <!-- Sponsor Slot -->
-    <aside id="sponsor-slot" class="mt-12 p-5 rounded-2xl border border-dashed border-slate-300 bg-white text-center text-xs text-slate-500 max-w-3xl mx-auto shadow-2xs">
-      <span class="font-semibold text-slate-600 uppercase tracking-wider text-[11px] block mb-1">Sponsored</span>
-      Build high-performance, private, client-side web tools with GreenTools Open Source Framework.
-    </aside>
 
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-200 bg-white mt-12 py-10">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col gap-8">
-      <!-- Authoritative Resource Link Block -->
-      <div class="p-6 rounded-2xl bg-[#FBFBF9] border border-slate-200/90 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-xs">
+  <!-- Authoritative Editorial Footer -->
+  <footer class="border-t border-[#EAE8E3] bg-[#F4F3F0] mt-16 py-12">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col gap-8">
+      
+      <!-- Launchist Fleet Banner -->
+      <div class="p-6 rounded-2xl bg-[#FFFFFF] border border-[#EAE8E3] flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left shadow-2xs">
         <div class="flex items-center gap-3.5">
-          <div class="w-10 h-10 rounded-xl bg-[#1A362B] text-white flex items-center justify-center shrink-0 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-[#1A362B] text-white flex items-center justify-center shrink-0">
             <i data-lucide="book-open" class="w-5 h-5"></i>
           </div>
           <div>
-            <div class="text-sm font-bold text-slate-900">Launchist Programmatic Authority Fleet</div>
-            <div class="text-xs text-slate-500">300 In-Depth System Blueprints &amp; Operational Guides for Intentional Systems.</div>
+            <div class="serif text-base font-bold text-[#111110]">Launchist Programmatic Authority Fleet</div>
+            <div class="text-xs text-[#76746E]">300 In-Depth System Blueprints &amp; Operational Guides across 5 Core Domains.</div>
           </div>
         </div>
-        <a href="https://greentools-dev.github.io/launchist-blog-fleet/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1A362B] text-white hover:bg-black transition text-xs sm:text-sm font-semibold shrink-0 shadow-sm">
-          <span>Explore our 300 In-Depth System Blueprints &amp; Operational Guides on Launchist Blog &rarr;</span>
+        <a href="https://greentools-dev.github.io/launchist-blog-fleet/" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#1A362B] text-white hover:bg-black transition text-xs font-semibold shrink-0">
+          <span>Explore 300 Operational Guides &rarr;</span>
         </a>
       </div>
 
-      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500">
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-[#76746E]">
         <div class="flex flex-col sm:flex-row items-center gap-3">
-          <div class="flex items-center gap-2 font-bold text-slate-800">
-            <i data-lucide="sparkles" class="w-4 h-4 text-emerald-600"></i>
+          <div class="flex items-center gap-2 font-bold text-[#111110]">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#1A362B]"></span>
             GreenTools.dev
           </div>
           <span class="hidden sm:inline">&bull;</span>
-          <span>40 100% Client-Side Web Utilities</span>
+          <span>42 100% Client-Side Web Utilities</span>
           <span class="hidden sm:inline">&bull;</span>
           <span>Zero Server Telemetry</span>
         </div>
         <div class="flex items-center gap-4">
-          <a href="https://greentools-dev.github.io/launchist-blog-fleet/" class="text-emerald-800 font-semibold hover:text-slate-900 transition-colors">Operating Guides (300)</a>
+          <a href="/sitemap.xml" class="hover:text-[#111110] transition-colors">Master Sitemap</a>
           <span>&bull;</span>
-          <a href="https://github.com/greentools-dev" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors">GitHub Organization</a>
+          <a href="https://greentools-dev.github.io/launchist-blog-fleet/sitemap.xml" class="hover:text-[#111110] transition-colors">Blog Sitemap</a>
+          <span>&bull;</span>
+          <a href="https://github.com/greentools-dev" target="_blank" rel="noopener noreferrer" class="hover:text-[#111110] transition-colors">GitHub</a>
           <span>&bull;</span>
           <span>Public Domain / MIT</span>
         </div>
@@ -313,6 +477,7 @@
         desc: 'Interactive ROAS, target profit margin, and break-even ad spend simulator with dynamic fee models.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'calculator',
         url: 'https://greentools-dev.github.io/roas-calculator/'
       },
@@ -322,6 +487,7 @@
         desc: 'Detects unescaped commas, normalizes dates to ISO 8601, and cleans UTF-8 characters for painless Notion imports.',
         category: 'data',
         categoryLabel: 'Data & CSV',
+        isByok: false,
         icon: 'file-spreadsheet',
         url: 'https://greentools-dev.github.io/notion-csv-cleaner/'
       },
@@ -331,6 +497,7 @@
         desc: 'Strips timestamps, sequence numbers, and formatting tags to extract pure flowing transcript paragraphs.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'subtitles',
         url: 'https://greentools-dev.github.io/subtitle-to-text/'
       },
@@ -340,6 +507,7 @@
         desc: 'Render vector SVGs to crisp PNGs at 1x, 2x, 4x, or custom resolutions with transparent or solid backgrounds.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'image',
         url: 'https://greentools-dev.github.io/svg-to-png/'
       },
@@ -349,6 +517,7 @@
         desc: 'Pure Web Audio synthesis generating continuous White, Pink, and Brown noise paired with procedural rain sounds.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'headphones',
         url: 'https://greentools-dev.github.io/focus-noise-generator/'
       },
@@ -358,6 +527,7 @@
         desc: 'Canvas 2D luminance thresholding erasing paper backgrounds to pure transparency and boosting ink contrast.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'pen-tool',
         url: 'https://greentools-dev.github.io/signature-transparentizer/'
       },
@@ -367,6 +537,7 @@
         desc: 'Flatten deeply nested JSON structures, arrays, and webhooks into clean tabular CSV columns with dot notation.',
         category: 'data',
         categoryLabel: 'Data & CSV',
+        isByok: false,
         icon: 'table',
         url: 'https://greentools-dev.github.io/json-to-csv-flattener/'
       },
@@ -376,6 +547,7 @@
         desc: 'Binary JPEG/PNG marker parser showing embedded camera specs and GPS coordinates with 1-click lossless stripping.',
         category: 'privacy',
         categoryLabel: 'Privacy & Security',
+        isByok: false,
         icon: 'camera-off',
         url: 'https://greentools-dev.github.io/photo-exif-purifier/'
       },
@@ -385,6 +557,7 @@
         desc: 'Strip invasive UTM codes, Facebook fbclid, Google gclid, and referral trackers with live click-to-clean.',
         category: 'privacy',
         categoryLabel: 'Privacy & Security',
+        isByok: false,
         icon: 'link-2-off',
         url: 'https://greentools-dev.github.io/tracking-url-sanitizer/'
       },
@@ -394,6 +567,7 @@
         desc: 'Side-by-side character & word level diff visualizer with color-coded insertion and deletion badges.',
         category: 'ai',
         categoryLabel: 'AI & Prompts',
+        isByok: false,
         icon: 'git-compare',
         url: 'https://greentools-dev.github.io/system-prompt-diffchecker/'
       },
@@ -403,6 +577,7 @@
         desc: '60fps Canvas 2D circular framing with zoom/rotate controls and instant social media circular preview overlays.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'circle',
         url: 'https://greentools-dev.github.io/avatar-circle-cropper/'
       },
@@ -412,6 +587,7 @@
         desc: 'Convert unstructured prompts into Anthropic/OpenAI structured XML tags (<context>, <instructions>, <rules>).',
         category: 'ai',
         categoryLabel: 'AI & Prompts',
+        isByok: false,
         icon: 'file-code',
         url: 'https://greentools-dev.github.io/markdown-to-ai-xml/'
       },
@@ -421,6 +597,7 @@
         desc: 'Flatten sensitive documents into un-selectable rasterized images to prevent hidden text metadata leaks.',
         category: 'privacy',
         categoryLabel: 'Privacy & Security',
+        isByok: false,
         icon: 'shield-alert',
         url: 'https://greentools-dev.github.io/pdf-redaction-hardener/'
       },
@@ -430,6 +607,7 @@
         desc: 'Generate complete multi-platform icon asset suites for iOS, Android, and PWAs with 1-click batch ZIP download.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'layout-grid',
         url: 'https://greentools-dev.github.io/app-icon-kitchen/'
       },
@@ -439,6 +617,7 @@
         desc: 'Regex-based client-side scanner replacing emails, phone numbers, SSNs, and credit cards with synthetic tokens.',
         category: 'privacy',
         categoryLabel: 'Privacy & Security',
+        isByok: false,
         icon: 'user-x',
         url: 'https://greentools-dev.github.io/dataset-anonymizer/'
       },
@@ -448,6 +627,7 @@
         desc: 'Add or subtract exact millisecond offsets across sequential subtitle cue blocks to fix out-of-sync audio.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'clock',
         url: 'https://greentools-dev.github.io/subtitle-time-shifter/'
       },
@@ -457,6 +637,7 @@
         desc: 'Strip conversational pleasantries, passive filler, and repetitive prose to maximize LLM context density.',
         category: 'ai',
         categoryLabel: 'AI & Prompts',
+        isByok: false,
         icon: 'scissors',
         url: 'https://greentools-dev.github.io/token-density-trimmer/'
       },
@@ -466,6 +647,7 @@
         desc: 'Calculate exact luminance ratios between text and background colors with instant AA/AAA compliance badges.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'eye',
         url: 'https://greentools-dev.github.io/color-contrast-checker/'
       },
@@ -475,6 +657,7 @@
         desc: 'Visual multi-point polygon canvas editor generating ready-to-paste CSS clip-path declarations with presets.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'shapes',
         url: 'https://greentools-dev.github.io/css-clip-path-generator/'
       },
@@ -484,6 +667,7 @@
         desc: 'Full-screen cycling color test patterns (Red, Green, Blue, White, Black) to detect stuck or dead display pixels.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'tv',
         url: 'https://greentools-dev.github.io/screen-dead-pixel-tester/'
       },
@@ -493,6 +677,7 @@
         desc: 'Sobel edge-detection filter converting family photos into high-contrast black-and-white outline sketches.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'brush',
         url: 'https://greentools-dev.github.io/image-to-coloring-page/'
       },
@@ -502,6 +687,7 @@
         desc: 'Multiply recipe ingredients cleanly without float errors, converting decimals back to culinary fractions (½, ⅓).',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'scale',
         url: 'https://greentools-dev.github.io/recipe-scaler/'
       },
@@ -511,6 +697,7 @@
         desc: 'Simultaneously convert strings into camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and URL slugs.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'type',
         url: 'https://greentools-dev.github.io/case-converter-pro/'
       },
@@ -520,6 +707,7 @@
         desc: 'Unwrap ragged 70-character hard line returns from forwarded emails and PDF copies into flowing paragraphs.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'wrap-text',
         url: 'https://greentools-dev.github.io/email-line-break-fixer/'
       },
@@ -529,6 +717,7 @@
         desc: 'Millimeter-accurate vector SVG grid maker supporting Metric, Imperial, Dot Grids, Isometric 3D, and Music Staves.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'grid',
         url: 'https://greentools-dev.github.io/graph-paper-generator/'
       },
@@ -538,6 +727,7 @@
         desc: 'ITU-R BS.1770-4 K-weighting loudness engine checking compliance for Spotify, YouTube, and Apple Podcasts.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'activity',
         url: 'https://greentools-dev.github.io/audio-loudness-meter/'
       },
@@ -547,6 +737,7 @@
         desc: 'Binary JUMBF parser identifying AI generators (Firefly, DALL-E) and offering 1-click lossless manifest stripping.',
         category: 'privacy',
         categoryLabel: 'Privacy & Security',
+        isByok: false,
         icon: 'badge-check',
         url: 'https://greentools-dev.github.io/c2pa-metadata-checker/'
       },
@@ -556,6 +747,7 @@
         desc: 'Double-sided flashcard layout with mirrored columns for perfect front-and-back alignment on duplex printers.',
         category: 'utilities',
         categoryLabel: 'Daily Utilities',
+        isByok: false,
         icon: 'layers',
         url: 'https://greentools-dev.github.io/flashcard-printer/'
       },
@@ -565,6 +757,7 @@
         desc: 'Ultra-fast virtualized tabular data explorer supporting large CSV files with client-side sorting and search.',
         category: 'data',
         categoryLabel: 'Data & CSV',
+        isByok: false,
         icon: 'file-text',
         url: 'https://greentools-dev.github.io/csv-viewer/'
       },
@@ -574,6 +767,7 @@
         desc: 'Interactive visual overlay simulator for TikTok, Instagram Reels, and YouTube Shorts UI safe zones.',
         category: 'media',
         categoryLabel: 'Media & Video',
+        isByok: false,
         icon: 'layout',
         url: 'https://greentools-dev.github.io/safezone-previewer/'
       },
@@ -582,7 +776,8 @@
         name: 'LinkedIn & Instagram Carousel Slide Studio',
         desc: 'Generate viral 1080x1350 multi-slide carousels with direct AI generation, multi-page PDF, and PNG zip exports.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'presentation',
         url: 'https://greentools-dev.github.io/byok-carousel-studio/'
       },
@@ -591,7 +786,8 @@
         name: 'Automated Pinterest Pin Batch Engine',
         desc: 'Auto-generate 3 high-converting 1000x1500 vertical Pinterest pins with curiosity, listicle, and benefit angles.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'pin',
         url: 'https://greentools-dev.github.io/byok-pin-engine/'
       },
@@ -600,7 +796,8 @@
         name: 'Interactive SOP & Runbook Engine',
         desc: 'Multi-phase operational checklists with integrated countdown timers, persistent state, and Notion markdown export.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'check-square',
         url: 'https://greentools-dev.github.io/dynamic-sop-builder/'
       },
@@ -609,7 +806,8 @@
         name: 'Short-Form Video Ad Beat & Storyboard Creator',
         desc: 'Pace high-converting 15s, 30s, and 60s short-form ads with visual scene cues, on-screen text, and CSV scripts.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'clapperboard',
         url: 'https://greentools-dev.github.io/video-ad-storyboarder/'
       },
@@ -618,7 +816,8 @@
         name: 'Multi-Framework Performance Ad Copy Studio',
         desc: 'Generate 5 proven direct-response angles (PAS, AIDA, BAB, Story, Scarcity) with automated policy trigger checks.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'megaphone',
         url: 'https://greentools-dev.github.io/byok-ad-copy-spinner/'
       },
@@ -627,7 +826,8 @@
         name: 'Programmatic JSON-LD Schema Architect & SERP Visualizer',
         desc: 'Generate and validate Schema.org structured data with real-time Google Search Rich Result card previews.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'code-2',
         url: 'https://greentools-dev.github.io/schema-markup-architect/'
       },
@@ -636,7 +836,8 @@
         name: 'Thumbnail Text Hook & Contrast Visualizer',
         desc: 'Design high-CTR video thumbnail hooks for YouTube (16:9) and TikTok (9:16) with real-time WCAG pixel contrast analysis.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'flame',
         url: 'https://greentools-dev.github.io/viral-hook-visualizer/'
       },
@@ -645,7 +846,8 @@
         name: 'Notion 2.0 Formula Generator, Linter & Sandbox',
         desc: 'Build, lint, and test Notion Formulas 2.0 (ifs, let, map, dateBetween) with an instant mock database sandbox.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'function-square',
         url: 'https://greentools-dev.github.io/notion-formula-lab/'
       },
@@ -654,7 +856,8 @@
         name: 'In-Browser Multi-Step Prompt Pipeline & Chain Runner',
         desc: 'Run sequential chain-of-thought pipelines (Analyze -> Draft -> Red-Team Polish) with zero intermediate cloud logging.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'git-branch',
         url: 'https://greentools-dev.github.io/byok-prompt-chainer/'
       },
@@ -663,7 +866,8 @@
         name: 'Customer Review & Pain-Point Cluster Studio',
         desc: 'Mine customer feedback into quantified sentiment scores, top 5 objections, loved features, and 3 high-converting ad angles.',
         category: 'byok',
-        categoryLabel: 'AI Web Studios (BYOK)',
+        categoryLabel: 'AI Web Studios',
+        isByok: true,
         icon: 'pie-chart',
         url: 'https://greentools-dev.github.io/review-sentiment-cluster/'
       },
@@ -673,6 +877,7 @@
         desc: 'Losslessly excise C2PA manifests, Adobe provenance atoms, XMP tags, and IPTC AI markers from MP4, MOV, and images.',
         category: 'privacy',
         categoryLabel: 'Privacy & Security',
+        isByok: false,
         icon: 'shield-check',
         url: 'https://greentools-dev.github.io/ai-metadata-sanitizer/'
       },
@@ -682,6 +887,7 @@
         desc: 'Neutralize invisible AI frequency-domain watermarks (SynthID, DCT/Wavelet embeddings) with sub-perceptual spatial dithering.',
         category: 'ai',
         categoryLabel: 'AI & Prompts',
+        isByok: false,
         icon: 'waves',
         url: 'https://greentools-dev.github.io/synthid-watermark-disrupter/'
       }
@@ -701,12 +907,18 @@
 
     // Calculate Category Counts
     function updateCategoryCounts() {
-      const counts = { all: toolsData.length };
+      const counts = { all: toolsData.length, browser: 0, byok: 0 };
       toolsData.forEach(tool => {
         counts[tool.category] = (counts[tool.category] || 0) + 1;
+        if (tool.isByok) {
+          counts.byok++;
+        } else {
+          counts.browser++;
+        }
       });
 
       document.getElementById('count-all').textContent = counts.all || 0;
+      if (document.getElementById('count-browser')) document.getElementById('count-browser').textContent = counts.browser || 0;
       if (document.getElementById('count-byok')) document.getElementById('count-byok').textContent = counts.byok || 0;
       if (document.getElementById('count-media')) document.getElementById('count-media').textContent = counts.media || 0;
       if (document.getElementById('count-data')) document.getElementById('count-data').textContent = counts.data || 0;
@@ -720,7 +932,17 @@
       toolsGrid.innerHTML = '';
 
       const filtered = toolsData.filter(item => {
-        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        let matchesCategory = false;
+        if (currentCategory === 'all') {
+          matchesCategory = true;
+        } else if (currentCategory === 'browser-only') {
+          matchesCategory = !item.isByok;
+        } else if (currentCategory === 'byok') {
+          matchesCategory = item.isByok;
+        } else {
+          matchesCategory = item.category === currentCategory;
+        }
+
         const matchesSearch = searchQuery === '' || 
           item.name.toLowerCase().includes(searchQuery) ||
           item.desc.toLowerCase().includes(searchQuery) ||
@@ -746,34 +968,35 @@
         card.href = tool.url;
         card.target = '_blank';
         card.rel = 'noopener noreferrer';
-        card.className = 'tool-card bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between hover:border-emerald-300 group';
+        card.className = 'tool-card bg-white rounded-2xl border border-[#EAE8E3] p-5 shadow-2xs flex flex-col justify-between group';
 
-        const isByok = tool.category === 'byok';
+        const tagBadge = tool.isByok 
+          ? `<span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#111110]/5 text-[#111110] border border-[#111110]/15">BYOK LOCAL</span>`
+          : `<span class="inline-flex items-center gap-1 text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#1A362B]/10 text-[#1A362B] border border-[#1A362B]/20">100% IN-BROWSER</span>`;
 
         card.innerHTML = `
           <div>
-            <div class="flex items-center justify-between mb-3">
-              <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 text-slate-700 flex items-center justify-center ${isByok ? 'group-hover:bg-purple-50 group-hover:text-purple-700 group-hover:border-purple-200' : 'group-hover:bg-emerald-50 group-hover:text-emerald-700 group-hover:border-emerald-200'} transition-colors shadow-2xs">
+            <div class="flex items-center justify-between mb-3.5">
+              <div class="w-10 h-10 rounded-xl bg-[#F4F3F0] text-[#111110] flex items-center justify-center group-hover:bg-[#1A362B] group-hover:text-white transition-colors">
                 <i data-lucide="${tool.icon}" class="w-5 h-5"></i>
               </div>
-              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-md ${isByok ? 'bg-purple-50 text-purple-700 border border-purple-200' : 'bg-slate-100 text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-800'} transition-colors">
-                ${tool.categoryLabel}
-              </span>
+              <div class="flex items-center gap-1.5">
+                ${tagBadge}
+              </div>
             </div>
-            <h3 class="text-sm sm:text-base font-bold text-slate-900 ${isByok ? 'group-hover:text-purple-700' : 'group-hover:text-emerald-700'} transition-colors mb-1.5 flex items-center gap-1.5">
+            <h3 class="serif text-base font-bold text-[#111110] group-hover:text-[#1A362B] transition-colors mb-2 flex items-center gap-1.5">
               <span>${tool.name}</span>
             </h3>
-            <p class="text-xs text-slate-500 leading-relaxed line-clamp-2 mb-4">
+            <p class="text-xs text-[#76746E] leading-relaxed line-clamp-2 mb-5">
               ${tool.desc}
             </p>
           </div>
 
-          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-600">
-            <span class="inline-flex items-center gap-1 text-[11px] ${isByok ? 'text-purple-700' : 'text-emerald-700'} font-medium">
-              <i data-lucide="${isByok ? 'key' : 'check'}" class="w-3.5 h-3.5 ${isByok ? 'text-purple-600' : 'text-emerald-600'}"></i>
-              ${isByok ? '100% BYOK &bull; Local' : '100% In-Browser'}
+          <div class="pt-3 border-t border-[#EAE8E3] flex items-center justify-between text-xs font-semibold">
+            <span class="text-[11px] text-[#76746E] uppercase font-bold tracking-wider">
+              ${tool.categoryLabel}
             </span>
-            <span class="text-slate-400 ${isByok ? 'group-hover:text-purple-600' : 'group-hover:text-emerald-600'} transition-colors flex items-center gap-1 text-xs">
+            <span class="text-[#76746E] group-hover:text-[#1A362B] transition-colors flex items-center gap-1 text-xs">
               Open <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
             </span>
           </div>
@@ -789,9 +1012,9 @@
     categoryPills.forEach(pill => {
       pill.addEventListener('click', () => {
         categoryPills.forEach(p => {
-          p.className = 'cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs';
+          p.className = 'cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition';
         });
-        pill.className = 'cat-pill active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white transition-all shadow-sm';
+        pill.className = 'cat-pill active px-3 py-1.5 rounded-lg text-[11px] font-bold bg-[#111110] text-[#FBFBF9] border border-[#111110] transition shadow-xs';
 
         currentCategory = pill.dataset.category;
         renderCards();
@@ -825,9 +1048,9 @@
 
       categoryPills.forEach(p => {
         if (p.dataset.category === 'all') {
-          p.className = 'cat-pill active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white transition-all shadow-sm';
+          p.className = 'cat-pill active px-3 py-1.5 rounded-lg text-[11px] font-bold bg-[#111110] text-[#FBFBF9] border border-[#111110] transition shadow-xs';
         } else {
-          p.className = 'cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs';
+          p.className = 'cat-pill px-3 py-1.5 rounded-lg text-[11px] font-semibold bg-[#FFFFFF] border border-[#EAE8E3] text-[#76746E] hover:text-[#111110] hover:border-[#111110] transition';
         }
       });
 
