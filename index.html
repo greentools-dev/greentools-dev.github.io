@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenTools.dev | 30+ Private, 100% Client-Side Web Utilities</title>
+  <meta name="description" content="Discover 30+ high-utility, zero-server web tools for creators, developers, and everyday workflows. All processing happens 100% locally in your browser memory — your files and data never touch a server.">
+  <meta name="keywords" content="client-side tools, private web tools, developer utilities, in-browser tools, zero telemetry, media utilities, privacy tools, data cleaners">
+  <link rel="canonical" href="https://greentools-dev.github.io/">
+  <meta property="og:title" content="GreenTools.dev | Private, In-Browser Utilities">
+  <meta property="og:description" content="30+ Zero-Server Utilities. 100% Client-Side Processing. Zero Telemetry.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://greentools-dev.github.io/">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              900: '#064e3b',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #f8fafc;
+      background-image: 
+        radial-gradient(rgba(15, 23, 42, 0.07) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .tool-card {
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tool-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 24px -10px rgba(15, 23, 42, 0.08);
+    }
+  </style>
+
+  <!-- Structured Data JSON-LD (CollectionPage + ItemList) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "name": "GreenTools.dev",
+        "url": "https://greentools-dev.github.io/",
+        "description": "Network of 30+ 100% client-side web tools and utilities that process data entirely in browser memory."
+      },
+      {
+        "@type": "CollectionPage",
+        "name": "GreenTools.dev Web Tools Directory",
+        "url": "https://greentools-dev.github.io/",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Ecom ROAS & Break-Even Simulator", "url": "https://greentools-dev.github.io/roas-calculator/" },
+            { "@type": "ListItem", "position": 2, "name": "Notion CSV Import Sanitizer", "url": "https://greentools-dev.github.io/notion-csv-cleaner/" },
+            { "@type": "ListItem", "position": 3, "name": "SRT & VTT Subtitle Text Extractor", "url": "https://greentools-dev.github.io/subtitle-to-text/" },
+            { "@type": "ListItem", "position": 4, "name": "High-Res SVG to PNG Converter", "url": "https://greentools-dev.github.io/svg-to-png/" },
+            { "@type": "ListItem", "position": 5, "name": "Procedural White Noise & Rain Generator", "url": "https://greentools-dev.github.io/focus-noise-generator/" },
+            { "@type": "ListItem", "position": 6, "name": "Handwritten Signature Transparentizer", "url": "https://greentools-dev.github.io/signature-transparentizer/" },
+            { "@type": "ListItem", "position": 7, "name": "Nested JSON to Flat CSV Converter", "url": "https://greentools-dev.github.io/json-to-csv-flattener/" },
+            { "@type": "ListItem", "position": 8, "name": "Deep EXIF & GPS Metadata Scrubber", "url": "https://greentools-dev.github.io/photo-exif-purifier/" },
+            { "@type": "ListItem", "position": 9, "name": "Clean Link & Tracking Parameter Stripper", "url": "https://greentools-dev.github.io/tracking-url-sanitizer/" },
+            { "@type": "ListItem", "position": 10, "name": "System Prompt & Text Diffchecker", "url": "https://greentools-dev.github.io/system-prompt-diffchecker/" },
+            { "@type": "ListItem", "position": 11, "name": "Profile Picture Circle Cropper", "url": "https://greentools-dev.github.io/avatar-circle-cropper/" },
+            { "@type": "ListItem", "position": 12, "name": "Markdown to AI Prompt XML Optimizer", "url": "https://greentools-dev.github.io/markdown-to-ai-xml/" },
+            { "@type": "ListItem", "position": 13, "name": "Permanent PDF Redaction Hardener", "url": "https://greentools-dev.github.io/pdf-redaction-hardener/" },
+            { "@type": "ListItem", "position": 14, "name": "PWA & Mobile App Icon Kitchen", "url": "https://greentools-dev.github.io/app-icon-kitchen/" },
+            { "@type": "ListItem", "position": 15, "name": "Dataset PII Anonymizer & Scrubber", "url": "https://greentools-dev.github.io/dataset-anonymizer/" },
+            { "@type": "ListItem", "position": 16, "name": "SRT Subtitle Sync & Time-Shifter", "url": "https://greentools-dev.github.io/subtitle-time-shifter/" },
+            { "@type": "ListItem", "position": 17, "name": "LLM Prompt Fluff & Context Window Trimmer", "url": "https://greentools-dev.github.io/token-density-trimmer/" },
+            { "@type": "ListItem", "position": 18, "name": "WCAG 2.2 Color Contrast Matrix", "url": "https://greentools-dev.github.io/color-contrast-checker/" },
+            { "@type": "ListItem", "position": 19, "name": "Interactive CSS Clip-Path Polygon Generator", "url": "https://greentools-dev.github.io/css-clip-path-generator/" },
+            { "@type": "ListItem", "position": 20, "name": "Screen Dead Pixel & OLED Bleed Diagnostic", "url": "https://greentools-dev.github.io/screen-dead-pixel-tester/" },
+            { "@type": "ListItem", "position": 21, "name": "Photo to Printable Coloring Page Maker", "url": "https://greentools-dev.github.io/image-to-coloring-page/" },
+            { "@type": "ListItem", "position": 22, "name": "Recipe Fraction Multiplier & Serving Scaler", "url": "https://greentools-dev.github.io/recipe-scaler/" },
+            { "@type": "ListItem", "position": 23, "name": "Multi-Format Text & Variable Case Converter", "url": "https://greentools-dev.github.io/case-converter-pro/" },
+            { "@type": "ListItem", "position": 24, "name": "Email & PDF Hard Line Break Unwrapper", "url": "https://greentools-dev.github.io/email-line-break-fixer/" },
+            { "@type": "ListItem", "position": 25, "name": "Printable Custom Graph & Grid Paper Maker", "url": "https://greentools-dev.github.io/graph-paper-generator/" },
+            { "@type": "ListItem", "position": 26, "name": "Client-Side LUFS & Audio Loudness Analyzer", "url": "https://greentools-dev.github.io/audio-loudness-meter/" },
+            { "@type": "ListItem", "position": 27, "name": "AI Content Credentials & C2PA Inspector", "url": "https://greentools-dev.github.io/c2pa-metadata-checker/" },
+            { "@type": "ListItem", "position": 28, "name": "Printable Double-Sided Flashcard Generator", "url": "https://greentools-dev.github.io/flashcard-printer/" },
+            { "@type": "ListItem", "position": 29, "name": "High-Performance CSV & TSV Viewer", "url": "https://greentools-dev.github.io/csv-viewer/" },
+            { "@type": "ListItem", "position": 30, "name": "Social Media Safe Zones & Canvas Previewer", "url": "https://greentools-dev.github.io/safezone-previewer/" }
+          ]
+        }
+      }
+    ]
+  </script>
+</head>
+<body class="min-h-screen flex flex-col font-sans text-slate-800 antialiased selection:bg-brand-100 selection:text-brand-900">
+
+  <!-- Header -->
+  <header class="border-b border-slate-200/80 bg-white/90 backdrop-blur-md sticky top-0 z-40">
+    <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-sm shadow-emerald-500/20">
+          <i data-lucide="sparkles" class="w-5 h-5"></i>
+        </div>
+        <div>
+          <span class="font-extrabold text-slate-900 tracking-tight text-xl">GreenTools<span class="text-emerald-600">.dev</span></span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/80">
+          <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-600"></i>
+          100% In-Browser &bull; Zero Server Analytics
+        </span>
+        <a href="https://github.com/greentools-dev" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-slate-900 transition-colors p-1.5" title="GitHub Organization">
+          <i data-lucide="github" class="w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero & Trust Anchor -->
+  <section class="max-w-7xl w-full mx-auto px-4 pt-10 sm:pt-14 pb-8 flex flex-col items-center text-center">
+    
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200/70 mb-5 shadow-2xs">
+      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+      30+ Free In-Browser Single-Purpose Utilities
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight max-w-3xl leading-tight sm:leading-tight">
+      Private, Instant Web Tools with <span class="text-emerald-600">Zero Cloud Uploads</span>.
+    </h1>
+
+    <p class="mt-4 text-slate-600 text-sm sm:text-base leading-relaxed max-w-2xl">
+      High-utility calculators, media converters, and data sanitizers that run entirely inside your browser. No logins, no subscriptions, and zero tracking.
+    </p>
+
+    <!-- Trust Anchor Banner -->
+    <div class="mt-6 w-full max-w-3xl p-4 rounded-2xl bg-white border border-emerald-200/90 shadow-sm flex items-center gap-3.5 text-left">
+      <div class="w-10 h-10 rounded-xl bg-emerald-600 text-white flex items-center justify-center shrink-0 shadow-sm">
+        <i data-lucide="lock" class="w-5 h-5"></i>
+      </div>
+      <div>
+        <div class="text-xs sm:text-sm font-bold text-slate-900">
+          30+ Zero-Server Utilities. Processed 100% in your browser memory.
+        </div>
+        <div class="text-xs text-slate-500 mt-0.5">
+          Your photos, passwords, CSVs, audio files, and prompts never touch an external server or telemetry pipeline.
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Filter & Search Controls -->
+  <section class="max-w-7xl w-full mx-auto px-4 pb-6 sticky top-16 z-30 bg-white/80 backdrop-blur-md py-4 border-b border-slate-200/60">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      
+      <!-- Category Filter Pills -->
+      <div class="flex items-center gap-1.5 overflow-x-auto w-full md:w-auto pb-1 md:pb-0 scrollbar-none" id="category-pills">
+        <button type="button" class="cat-pill active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white transition-all shadow-sm" data-category="all">
+          All Tools <span class="ml-1 opacity-75 font-mono text-[11px]" id="count-all">30</span>
+        </button>
+        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="media">
+          Media &amp; Video <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-media">7</span>
+        </button>
+        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="data">
+          Data &amp; CSV <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-data">3</span>
+        </button>
+        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="ai">
+          AI &amp; Prompts <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-ai">4</span>
+        </button>
+        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="privacy">
+          Privacy &amp; Security <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-privacy">5</span>
+        </button>
+        <button type="button" class="cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs" data-category="utilities">
+          Daily Utilities <span class="ml-1 text-slate-400 font-mono text-[11px]" id="count-utilities">11</span>
+        </button>
+      </div>
+
+      <!-- Real-Time Search Bar -->
+      <div class="relative w-full md:w-80">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+          <i data-lucide="search" class="w-4 h-4"></i>
+        </div>
+        <input type="text" id="search-input" placeholder="Search 30+ tools... (Press '/' to focus)" class="w-full pl-9 pr-10 py-2 rounded-xl text-xs font-medium border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-2xs transition-all placeholder:text-slate-400">
+        <button type="button" id="search-clear" class="hidden absolute inset-y-0 right-0 pr-3 flex items-center text-slate-400 hover:text-slate-600">
+          <i data-lucide="x" class="w-3.5 h-3.5"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tools Directory Grid -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 py-8">
+    
+    <!-- Active Tools Count -->
+    <div class="flex items-center justify-between mb-6 text-xs text-slate-500 font-medium">
+      <span>Showing <strong id="visible-count" class="text-slate-900 font-bold">30</strong> applications</span>
+      <span class="text-slate-400">Press Esc to reset search</span>
+    </div>
+
+    <!-- Empty Search State -->
+    <div id="empty-search" class="hidden text-center py-16 bg-white rounded-3xl border border-slate-200 shadow-sm p-8">
+      <div class="w-12 h-12 rounded-2xl bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-3">
+        <i data-lucide="search-x" class="w-6 h-6"></i>
+      </div>
+      <h3 class="text-base font-bold text-slate-900 mb-1">No matching tools found</h3>
+      <p class="text-xs text-slate-500 max-w-sm mx-auto mb-4">Try checking your spelling or selecting "All Tools" to view the full directory.</p>
+      <button type="button" id="btn-reset-filters" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs transition-colors">
+        Reset Search &amp; Filters
+      </button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5" id="tools-grid">
+      <!-- 30 Cards dynamically rendered via JavaScript for instant client-side filtering -->
+    </div>
+
+    <!-- Sponsor Slot -->
+    <aside id="sponsor-slot" class="mt-12 p-5 rounded-2xl border border-dashed border-slate-300 bg-white text-center text-xs text-slate-500 max-w-3xl mx-auto shadow-2xs">
+      <span class="font-semibold text-slate-600 uppercase tracking-wider text-[11px] block mb-1">Sponsored</span>
+      Build high-performance, private, client-side web tools with GreenTools Open Source Framework.
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-200 bg-white mt-12 py-10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-500">
+      <div class="flex flex-col sm:flex-row items-center gap-3">
+        <div class="flex items-center gap-2 font-bold text-slate-800">
+          <i data-lucide="sparkles" class="w-4 h-4 text-emerald-600"></i>
+          GreenTools.dev
+        </div>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>100% Client-Side Web Utilities</span>
+        <span class="hidden sm:inline">&bull;</span>
+        <span>Zero Server Telemetry</span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-600">
+        <a href="https://github.com/greentools-dev" target="_blank" rel="noopener noreferrer" class="hover:text-slate-900 transition-colors flex items-center gap-1.5">
+          <i data-lucide="github" class="w-4 h-4"></i>
+          GitHub Organization
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Logic: Directory Data & Instant Fuzzy Search -->
+  <script>
+    // Complete 30-Tool Catalog
+    const toolsData = [
+      {
+        slug: 'roas-calculator',
+        name: 'Ecom ROAS & Break-Even Simulator',
+        desc: 'Calculate break-even ROAS, net margins, and simulate ad spend targets with pure client-side arithmetic.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'dollar-sign',
+        url: 'https://greentools-dev.github.io/roas-calculator/'
+      },
+      {
+        slug: 'notion-csv-cleaner',
+        name: 'Notion CSV Import Sanitizer',
+        desc: 'Sanitize messy CSVs, normalize ISO 8601 dates, escape nested commas, and strip non-UTF8 characters.',
+        category: 'data',
+        categoryLabel: 'Data & CSV',
+        icon: 'table',
+        url: 'https://greentools-dev.github.io/notion-csv-cleaner/'
+      },
+      {
+        slug: 'subtitle-to-text',
+        name: 'SRT & VTT Subtitle Text Extractor',
+        desc: 'Strip timestamps, sequence tags, and cues from subtitle files into clean, readable transcript documents.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'file-text',
+        url: 'https://greentools-dev.github.io/subtitle-to-text/'
+      },
+      {
+        slug: 'svg-to-png',
+        name: 'High-Res SVG to PNG Converter',
+        desc: 'Rasterize vector SVGs into high-resolution PNGs locally up to 8x resolution with transparent canvas toggles.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'image',
+        url: 'https://greentools-dev.github.io/svg-to-png/'
+      },
+      {
+        slug: 'focus-noise-generator',
+        name: 'White Noise & Procedural Rain Generator',
+        desc: 'Algorithmic Brownian, Pink noise, and procedural rain synthesizer using pure Web Audio API.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'headphones',
+        url: 'https://greentools-dev.github.io/focus-noise-generator/'
+      },
+      {
+        slug: 'signature-transparentizer',
+        name: 'Handwritten Signature Transparentizer',
+        desc: 'Erase paper backgrounds to pure transparency and enhance legal ink penmanship contrast with HTML5 Canvas.',
+        category: 'privacy',
+        categoryLabel: 'Privacy & Security',
+        icon: 'pen-tool',
+        url: 'https://greentools-dev.github.io/signature-transparentizer/'
+      },
+      {
+        slug: 'json-to-csv-flattener',
+        name: 'Nested JSON to Flat CSV Converter',
+        desc: 'Flatten deeply nested API payloads and Stripe/Shopify objects into clean RFC 4180 CSV tables.',
+        category: 'data',
+        categoryLabel: 'Data & CSV',
+        icon: 'file-spreadsheet',
+        url: 'https://greentools-dev.github.io/json-to-csv-flattener/'
+      },
+      {
+        slug: 'photo-exif-purifier',
+        name: 'Deep EXIF & GPS Metadata Scrubber',
+        desc: 'Inspect camera parameters and GPS coordinates with binary DataView, then strip metadata markers losslessly.',
+        category: 'privacy',
+        categoryLabel: 'Privacy & Security',
+        icon: 'shield-alert',
+        url: 'https://greentools-dev.github.io/photo-exif-purifier/'
+      },
+      {
+        slug: 'tracking-url-sanitizer',
+        name: 'Clean Link & Tracking Parameter Stripper',
+        desc: 'Strip invasive UTM parameters, Facebook fbclid, and Google gclid tokens from shared URLs with one click.',
+        category: 'privacy',
+        categoryLabel: 'Privacy & Security',
+        icon: 'link-2-off',
+        url: 'https://greentools-dev.github.io/tracking-url-sanitizer/'
+      },
+      {
+        slug: 'system-prompt-diffchecker',
+        name: 'System Prompt & Text Diffchecker',
+        desc: 'Myers visual diff algorithm highlighting added, deleted, and modified character tokens across prompts.',
+        category: 'ai',
+        categoryLabel: 'AI & Prompts',
+        icon: 'git-compare',
+        url: 'https://greentools-dev.github.io/system-prompt-diffchecker/'
+      },
+      {
+        slug: 'avatar-circle-cropper',
+        name: 'Profile Picture Circle Cropper',
+        desc: '60fps canvas cropping with zoom, 90-degree rotation, and real-time social mask previews for LinkedIn and Discord.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'user-check',
+        url: 'https://greentools-dev.github.io/avatar-circle-cropper/'
+      },
+      {
+        slug: 'markdown-to-ai-xml',
+        name: 'Markdown to AI Prompt XML Optimizer',
+        desc: 'Convert markdown headers, quotes, and code blocks into strict semantic tags (<instructions>, <context>).',
+        category: 'ai',
+        categoryLabel: 'AI & Prompts',
+        icon: 'code-2',
+        url: 'https://greentools-dev.github.io/markdown-to-ai-xml/'
+      },
+      {
+        slug: 'pdf-redaction-hardener',
+        name: 'Permanent PDF Redaction Hardener',
+        desc: 'Burn solid blackout boxes into raw pixel data to destroy underlying vector text and prevent copy extraction.',
+        category: 'privacy',
+        categoryLabel: 'Privacy & Security',
+        icon: 'file-lock-2',
+        url: 'https://greentools-dev.github.io/pdf-redaction-hardener/'
+      },
+      {
+        slug: 'app-icon-kitchen',
+        name: 'PWA & Mobile App Icon Kitchen',
+        desc: 'Generate complete iOS, Android, and Web PWA icon manifest zip packages with rounded squircle masks.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'smartphone',
+        url: 'https://greentools-dev.github.io/app-icon-kitchen/'
+      },
+      {
+        slug: 'dataset-anonymizer',
+        name: 'Dataset PII Anonymizer & Scrubber',
+        desc: 'Detect and replace emails, phone numbers, SSNs, and credit cards with synthetic dummy tokens in-browser.',
+        category: 'privacy',
+        categoryLabel: 'Privacy & Security',
+        icon: 'user-x',
+        url: 'https://greentools-dev.github.io/dataset-anonymizer/'
+      },
+      {
+        slug: 'subtitle-time-shifter',
+        name: 'SRT Subtitle Sync & Offset Time-Shifter',
+        desc: 'Add or subtract millisecond offsets (+500ms, -1s) across all SRT and VTT cues with deterministic accuracy.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'clock',
+        url: 'https://greentools-dev.github.io/subtitle-time-shifter/'
+      },
+      {
+        slug: 'token-density-trimmer',
+        name: 'LLM Prompt Fluff & Context Window Trimmer',
+        desc: 'Strip conversational pleasantries, redundant framing, and whitespace bloat to slash API token expenses.',
+        category: 'ai',
+        categoryLabel: 'AI & Prompts',
+        icon: 'scissors',
+        url: 'https://greentools-dev.github.io/token-density-trimmer/'
+      },
+      {
+        slug: 'color-contrast-checker',
+        name: 'WCAG 2.2 Color Contrast Matrix',
+        desc: 'Calculate exact relative luminance contrast ratios, audit AA/AAA compliance, and auto-fix contrast levels.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'eye',
+        url: 'https://greentools-dev.github.io/color-contrast-checker/'
+      },
+      {
+        slug: 'css-clip-path-generator',
+        name: 'Interactive CSS Clip-Path Polygon Maker',
+        desc: 'Design geometric polygon cutouts visually with draggable SVG handles and export clean standard CSS.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'shapes',
+        url: 'https://greentools-dev.github.io/css-clip-path-generator/'
+      },
+      {
+        slug: 'screen-dead-pixel-tester',
+        name: 'Screen Dead Pixel & OLED Bleed Diagnostic',
+        desc: 'Fullscreen hardware display test with Screen Wake Lock API and primary color cycling to reveal stuck pixels.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'tv',
+        url: 'https://greentools-dev.github.io/screen-dead-pixel-tester/'
+      },
+      {
+        slug: 'image-to-coloring-page',
+        name: 'Photo to Printable Coloring Page Maker',
+        desc: 'Sobel edge-detection filter converting family photos into high-contrast black-and-white outline sketches.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'brush',
+        url: 'https://greentools-dev.github.io/image-to-coloring-page/'
+      },
+      {
+        slug: 'recipe-scaler',
+        name: 'Recipe Fraction Multiplier & Serving Scaler',
+        desc: 'Multiply recipe ingredients cleanly without float errors, converting decimals back to culinary fractions (½, ⅓).',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'scale',
+        url: 'https://greentools-dev.github.io/recipe-scaler/'
+      },
+      {
+        slug: 'case-converter-pro',
+        name: 'Multi-Format Text & Variable Case Converter',
+        desc: 'Simultaneously convert strings into camelCase, PascalCase, snake_case, kebab-case, CONSTANT_CASE, and URL slugs.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'type',
+        url: 'https://greentools-dev.github.io/case-converter-pro/'
+      },
+      {
+        slug: 'email-line-break-fixer',
+        name: 'Email & PDF Hard Line Break Unwrapper',
+        desc: 'Unwrap ragged 70-character hard line returns from forwarded emails and PDF copies into flowing paragraphs.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'wrap-text',
+        url: 'https://greentools-dev.github.io/email-line-break-fixer/'
+      },
+      {
+        slug: 'graph-paper-generator',
+        name: 'Printable Custom Graph & Grid Paper Maker',
+        desc: 'Millimeter-accurate vector SVG grid maker supporting Metric, Imperial, Dot Grids, Isometric 3D, and Music Staves.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'grid',
+        url: 'https://greentools-dev.github.io/graph-paper-generator/'
+      },
+      {
+        slug: 'audio-loudness-meter',
+        name: 'Client-Side LUFS & Audio Loudness Analyzer',
+        desc: 'ITU-R BS.1770-4 K-weighting loudness engine checking compliance for Spotify, YouTube, and Apple Podcasts.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'activity',
+        url: 'https://greentools-dev.github.io/audio-loudness-meter/'
+      },
+      {
+        slug: 'c2pa-metadata-checker',
+        name: 'AI Content Credentials & C2PA Inspector',
+        desc: 'Binary JUMBF parser identifying AI generators (Firefly, DALL-E) and offering 1-click lossless manifest stripping.',
+        category: 'ai',
+        categoryLabel: 'AI & Prompts',
+        icon: 'badge-check',
+        url: 'https://greentools-dev.github.io/c2pa-metadata-checker/'
+      },
+      {
+        slug: 'flashcard-printer',
+        name: 'Printable Double-Sided Flashcard Generator',
+        desc: 'Double-sided flashcard layout with mirrored columns for perfect front-and-back alignment on duplex printers.',
+        category: 'utilities',
+        categoryLabel: 'Daily Utilities',
+        icon: 'layers',
+        url: 'https://greentools-dev.github.io/flashcard-printer/'
+      },
+      {
+        slug: 'csv-viewer',
+        name: 'High-Performance In-Browser CSV & TSV Viewer',
+        desc: 'Ultra-fast virtualized tabular data explorer supporting large CSV files with client-side sorting and search.',
+        category: 'data',
+        categoryLabel: 'Data & CSV',
+        icon: 'file-text',
+        url: 'https://greentools-dev.github.io/csv-viewer/'
+      },
+      {
+        slug: 'safezone-previewer',
+        name: 'Social Media Safe Zones & Canvas Previewer',
+        desc: 'Interactive visual overlay simulator for TikTok, Instagram Reels, and YouTube Shorts UI safe zones.',
+        category: 'media',
+        categoryLabel: 'Media & Video',
+        icon: 'layout',
+        url: 'https://greentools-dev.github.io/safezone-previewer/'
+      }
+    ];
+
+    // DOM Elements
+    const toolsGrid = document.getElementById('tools-grid');
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    const emptySearch = document.getElementById('empty-search');
+    const visibleCount = document.getElementById('visible-count');
+    const btnResetFilters = document.getElementById('btn-reset-filters');
+    const categoryPills = document.querySelectorAll('.cat-pill');
+
+    let currentCategory = 'all';
+    let searchQuery = '';
+
+    // Render Cards
+    function renderCards() {
+      toolsGrid.innerHTML = '';
+
+      const filtered = toolsData.filter(item => {
+        const matchesCategory = currentCategory === 'all' || item.category === currentCategory;
+        const matchesSearch = searchQuery === '' || 
+          item.name.toLowerCase().includes(searchQuery) ||
+          item.desc.toLowerCase().includes(searchQuery) ||
+          item.slug.toLowerCase().includes(searchQuery) ||
+          item.categoryLabel.toLowerCase().includes(searchQuery);
+
+        return matchesCategory && matchesSearch;
+      });
+
+      visibleCount.textContent = filtered.length;
+
+      if (filtered.length === 0) {
+        emptySearch.classList.remove('hidden');
+        toolsGrid.classList.add('hidden');
+        return;
+      }
+
+      emptySearch.classList.add('hidden');
+      toolsGrid.classList.remove('hidden');
+
+      filtered.forEach(tool => {
+        const card = document.createElement('a');
+        card.href = tool.url;
+        card.target = '_blank';
+        card.rel = 'noopener noreferrer';
+        card.className = 'tool-card bg-white rounded-2xl border border-slate-200 p-5 shadow-sm flex flex-col justify-between hover:border-emerald-300 group';
+
+        card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <div class="w-10 h-10 rounded-xl bg-slate-50 border border-slate-100 text-slate-700 flex items-center justify-center group-hover:bg-emerald-50 group-hover:text-emerald-700 group-hover:border-emerald-200 transition-colors shadow-2xs">
+                <i data-lucide="${tool.icon}" class="w-5 h-5"></i>
+              </div>
+              <span class="text-[10px] font-semibold px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 group-hover:bg-emerald-50 group-hover:text-emerald-800 transition-colors">
+                ${tool.categoryLabel}
+              </span>
+            </div>
+            <h3 class="text-sm sm:text-base font-bold text-slate-900 group-hover:text-emerald-700 transition-colors mb-1.5 flex items-center gap-1.5">
+              <span>${tool.name}</span>
+            </h3>
+            <p class="text-xs text-slate-500 leading-relaxed line-clamp-2 mb-4">
+              ${tool.desc}
+            </p>
+          </div>
+
+          <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-slate-600">
+            <span class="inline-flex items-center gap-1 text-[11px] text-emerald-700 font-medium">
+              <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-600"></i>
+              100% In-Browser
+            </span>
+            <span class="text-slate-400 group-hover:text-emerald-600 transition-colors flex items-center gap-1 text-xs">
+              Open <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+            </span>
+          </div>
+        `;
+
+        toolsGrid.appendChild(card);
+      });
+
+      lucide.createIcons();
+    }
+
+    // Category Filter Handlers
+    categoryPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        categoryPills.forEach(p => {
+          p.className = 'cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs';
+        });
+        pill.className = 'cat-pill active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white transition-all shadow-sm';
+
+        currentCategory = pill.dataset.category;
+        renderCards();
+      });
+    });
+
+    // Search Input Handlers
+    searchInput.addEventListener('input', (e) => {
+      searchQuery = e.target.value.trim().toLowerCase();
+      if (searchQuery.length > 0) {
+        searchClear.classList.remove('hidden');
+      } else {
+        searchClear.classList.add('hidden');
+      }
+      renderCards();
+    });
+
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      searchClear.classList.add('hidden');
+      renderCards();
+      searchInput.focus();
+    });
+
+    btnResetFilters.addEventListener('click', () => {
+      searchInput.value = '';
+      searchQuery = '';
+      searchClear.classList.add('hidden');
+      currentCategory = 'all';
+      categoryPills.forEach(p => {
+        p.className = p.dataset.category === 'all'
+          ? 'cat-pill active px-3.5 py-1.5 rounded-xl text-xs font-bold bg-slate-900 text-white transition-all shadow-sm'
+          : 'cat-pill px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 transition-all shadow-2xs';
+      });
+      renderCards();
+    });
+
+    // Keyboard Shortcuts: '/' to search, 'Esc' to clear
+    document.addEventListener('keydown', (e) => {
+      if (e.key === '/' && document.activeElement !== searchInput) {
+        e.preventDefault();
+        searchInput.focus();
+      } else if (e.key === 'Escape' && document.activeElement === searchInput) {
+        searchInput.value = '';
+        searchQuery = '';
+        searchClear.classList.add('hidden');
+        renderCards();
+        searchInput.blur();
+      }
+    });
+
+    // Initial Render
+    renderCards();
+  </script>
+</body>
+</html>
